@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Real Estate Sales</title>
+  <link rel="icon" type="image/x-icon" href="download (1).jpeg">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:#004437;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      box-sizing: border-box;
+      background-color: #b9dbcd;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .contact-content {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    .contact-form {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards 0.5s;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5em 1em;
+      border: none;
+      cursor: pointer;
+    }
+
+    .additional-info {
+      margin-top: 2em;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <section class="contact-content">
+    <p>Have questions or want to get in touch? We'd love to hear from you. Fill out the form below, and we'll get back to you as soon as possible.</p>
+  </section>
+
+  <section class="contact-form">
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <div class="additional-info">
+    <h2>Additional Information</h2>
+    <p>Contact our office at <strong>(123) 456-7890</strong> or via email at <strong>info@realestatesales.com</strong>.</p>
+    <p>Visit us at 123 Main Street, Cityville, State, ZIP.</p>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      // In a real-world scenario, you would handle the form submission here, possibly using AJAX to send data to a server.
+      // For now, let's just show an alert.
+      alert('Form submitted! (This is a placeholder. In a real application, you would handle form submission differently.)');
+    }
+  </script>
+
+</body>
+</html>

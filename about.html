@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Real Estate Sales</title>
+  <link rel="icon" type="image/x-icon" href="download (1).jpeg">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #004437;
+      color: #012a15;
+    }
+
+    header {
+      background-color:#333 ;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      box-sizing: border-box;
+      background-color: #b9dbcd;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .member {
+      width: 30%;
+      margin-bottom: 1em;
+      box-sizing: border-box;
+    }
+
+    .member img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .contact-form {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5em 1em;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <section class="about-content">
+    <h2>Welcome to Real Estate Sales</h2>
+    <p>We are your trusted partner in finding the perfect property. With a dedicated team and years of experience, we provide expert advice and personalized service to make your real estate journey seamless.</p>
+  </section>
+
+  <section class="team-members">
+    <div class="member">
+      <img src="istockphoto-1367967516-170667a.webp" alt="Agent 1">
+      <p>John Doe</p>
+      <p>Real Estate Agent</p>
+    </div>
+
+    <div class="member">
+      <img src="istockphoto-1136413215-170667a.webp" alt="Agent 2">
+      <p>Jane Smith</p>
+      <p>Property Manager</p>
+    </div>
+
+    <div class="member">
+      <img src="istockphoto-1369746033-612x612.jpg" alt="Agent 3">
+      <p>Mike Johnson</p>
+      <p>Financial Advisor</p>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      // In a real-world scenario, you would handle the form submission here, possibly using AJAX to send data to a server.
+      // For now, let's just show an alert.
+      alert('Form submitted! (This is a placeholder. In a real application, you would handle form submission differently.)');
+    }
+  </script>
+
+</body>
+</html>

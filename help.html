@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - Real Estate Sales</title>
+  <link rel="icon" type="image/x-icon" href="download (1).jpeg">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:#004437;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      box-sizing: border-box;
+      background-color:#b9dbcd;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .faq {
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5em;
+    }
+
+    .faq-item {
+      margin-bottom: 1em;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .faq-answer {
+      display: none;
+    }
+
+    .contact-form {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5em 1em;
+      border: none;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Help Center</h1>
+  </header>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">How do I search for properties?</div>
+      <div class="faq-answer">To search for properties, go to our homepage and use the search bar. You can filter by location, property type, and more.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">How do I contact a real estate agent?</div>
+      <div class="faq-answer">You can contact a real estate agent by filling out the contact form on the property listing or by visiting our "Contact Us" page.</div>
+    </div>
+
+    <!-- Add more FAQ items as needed -->
+
+  </section>
+
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleAnswer(element) {
+      const answer = element.nextElementSibling;
+      answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      // In a real-world scenario, you would handle the form submission here, possibly using AJAX to send data to a server.
+      // For now, let's just show an alert.
+      alert('Form submitted! (This is a placeholder. In a real application, you would handle form submission differently.)');
+    }
+  </script>
+
+</body>
+</html>
